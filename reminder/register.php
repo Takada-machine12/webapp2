@@ -1,12 +1,12 @@
 <?php
 
-    $host = 'mysql3112.db.sakura.ne.jp';
+    $host = 'ホスト名';
 
-    $user = 'goldcivet74_sample01';
+    $user = 'ユーザ名';
 
-    $pass = 'takada1278';
+    $pass = 'パスワード';
 
-    $db = 'goldcivet74_sample01';
+    $db = 'データベース名';
 
 
 
