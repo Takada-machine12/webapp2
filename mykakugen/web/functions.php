@@ -98,7 +98,7 @@ function delete_auto_login($c_key) {
     unset($pdo);
 
     //Cookieを削除(有効期限を過去にすることで削除扱いになる。)
-    setcookie('MYKAKUGEN', '', time()-86400, '/');
+    setcookie('MYKAKUGEN', '', time()-86400, '/develop/mykakugen/web/');
 }
 
 //ユーザーIDからuserを検索
