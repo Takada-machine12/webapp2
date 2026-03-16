@@ -85,7 +85,7 @@ function setup_auto_login($user_id, $pdo) {
     $stmt->execute(array(':user_id' => $user_id, ':c_key' => $c_key, ':expire' => $expire));
 
     //ブラウザのCookieにも同じキーを保存
-    setcookie('MYKAKUGEN', $c_key, time()+3600*24*365, '/');
+    setcookie('MYKAKUGEN', $c_key, time()+3600*24*365, '/develop/mykakugen/web/');
 }
 
 //オートログイン デリート
