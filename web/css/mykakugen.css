@@ -1,0 +1,50 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+	background-color: #dadadcf1;
+}
+#main .sidebar-nav .form-group {
+    padding: 0 10px;
+}
+
+#main .jumbotron h1 {
+    font-size:53px;
+}
+
+#main .btn-primary {
+    background-color: #2c3e50;
+    border-color: #333;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+}
+
+#main .btn-success {
+    background-color: #2c3e50;
+    border-color: #333;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+#main .form-group {
+    border-color: #333;
+}
+
+#main h1 {
+	color: rgb(84, 85, 87);
+}
+
+#main .panel {
+	background-color: #f3f6f8;
+}
+
+#main .navbar {
+	background-color: #B8CACD;
+}
+
+#main .list-group-item {
+	background-color: #f3f6f8;
+}
