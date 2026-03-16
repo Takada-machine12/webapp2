@@ -2,12 +2,12 @@
 define('SERVICE_NAME', '格言リマインダー マイカクゲン');
 define('SERVICE_SHORT_NAME', 'マイカクゲン');
 define('COPYRIGHT', '&copy; TKD');
-define('SITE_URL', 'http://develop/mykakugen/web/');
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'mykakugen');
-define('ADMIN_MAIL_ADDRESS','test@mail.com');
+define('SITE_URL', 'サイトURL');
+define('DB_HOST', 'DBホスト名');
+define('DB_USER', 'DBユーザー名');
+define('DB_PASSWORD', 'DBパスワード');
+define('DB_NAME', 'DB名');
+define('ADMIN_MAIL_ADDRESS','メールアドレス');
 
 //setting.phpの通知時間を配列として保持
 $delivery_hours_array = array(
