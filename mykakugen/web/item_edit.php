@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
     $item_text = $_POST['item_text'];
 
-    $sql = "UPDATE item SET item_text = :item_text, updated_at = now() WHERE id = :id";
+    $sql = "UPDATE item SET item_text = :item_text, updated_at = now() WHERE id = :id AND user_id = :user_id";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(":item_text" => $item_text, ":id" => $id));
+    $stmt->execute(array(":item_text" => $item_text, ":id" => $id, ":user_id" => $_SESSION['USER']['id']));
     unset($pdo);
 
     $_SESSION['flash'] = '変更が完了しました。続けて変更する場合は下に入力してください。';
@@ -37,13 +37,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM item WHERE id = :id LIMIT 1";
+    $sql = "SELECT * FROM item WHERE id = :id AND user_id = :user_id LIMIT 1";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(":id" => $id));
+    $stmt->execute(array(":id" => $id, ":user_id" => $_SESSION['USER']['id']));
 
     $item = $stmt->fetch();
 
     unset($pdo);
+
+    //存在しないIDや他ユーザーのIDにアクセスした場合の処理
+    if (!$item) {
+        header('Location:'.SITE_URL.'item_list.php');
+        exit;
+    }
 }
 ?>
 
@@ -55,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <meta name="description" content="自分だけの格言をいつも忘れないために。格言リマインダー「マイカクゲン」" />
         <meta name="Keywords" content="マイカクゲン,格言,リマインダー" />
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <link href="css/mykakugen.css" rel="stylesheet">
     </head>

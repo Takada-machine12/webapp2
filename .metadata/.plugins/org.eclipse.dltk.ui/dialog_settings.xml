@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PHPProjectCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="570"/>
+		<item key="DIALOG_Y_ORIGIN" value="83"/>
+		<item key="DIALOG_WIDTH" value="780"/>
+		<item key="DIALOG_HEIGHT" value="663"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenMethodSelectionDialog2">
+		<item key="width" value="509"/>
+		<item key="height" value="336"/>
+		<item key="x" value="2146"/>
+		<item key="y" value="221"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.TypeSelectionComponent">
+		<item key="show_status_line" value="true"/>
+		<item key="workingset_settings" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet isWindowWorkingSet=&quot;false&quot; workingSetName=&quot;&quot;/&gt;"/>
+	</section>
+</section>

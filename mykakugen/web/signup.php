@@ -27,16 +27,22 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   //入力チェック
   if ($user_screen_name == '') {
     $error['user_screen_name'] = 'ニックネームを入力してください。';
+  } elseif (mb_strlen($user_screen_name) > 30) {
+    $error['user_screen_name'] = 'ニックネームは30文字以内で入力してください。';
   }
 
   //[パスワード]入力チェック
   if ($user_password == '') {
     $error['user_password'] = 'パスワードを入力してください。';
+  } elseif (mb_strlen($user_password) > 30) {
+    $error['user_password'] = 'パスワードは30文字以内で入力してください。';
   }
 
   //[メールアドレス]入力チェック
   if ($user_email == '') {
     $error['user_email'] = 'メールアドレスを入力してください。';
+  } elseif (mb_strlen($user_email) > 200) {
+    $error['user_email'] = 'メールアドレスは30文字以内で入力してください。';
   } elseif (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
     $error['user_email'] = '正しくないメールアドレスです。';
   }
@@ -66,8 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
       $to = ADMIN_MAIL_ADDRESS;
       $mail_title = '【マイカクゲン】新規ユーザー登録がありました。';
-      $mail_body = 'ニックネーム:'.$user['user_screen_name'].PHP_EOL;
-      $mail_body.= 'メールアドレス:'.$user['user_email'];
+      $mail_body = 'ニックネーム:'.$user_screen_name.PHP_EOL;
+      $mail_body.= 'メールアドレス:'.$user_email;
 
       mb_send_mail($to, $mail_title, $mail_body);
 
@@ -97,6 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     <meta name="description" content="自分だけの格言をいつも忘れないために。格言リマインダー「マイカクゲン」" />
     <meta name="Keywords" content="マイカクゲン,格言,リマインダー" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="css/mykakugen.css" rel="stylesheet">
   </head>

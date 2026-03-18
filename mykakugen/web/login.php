@@ -98,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         <meta name="description" content="自分だけの格言をいつも忘れないために。格言リマインダー「マイカクゲン」" />
         <meta name="Keywords" content="マイカクゲン,格言,リマインダー" />
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <link href="css/mykakugen.css" rel="stylesheet">
     </head>
