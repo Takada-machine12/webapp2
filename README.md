@@ -1,2 +1,2 @@
 # Webアプリ(学習用)
-Senceshareの課題
+Senseshareの課題
